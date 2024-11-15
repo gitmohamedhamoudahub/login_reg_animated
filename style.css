@@ -1,0 +1,108 @@
+
+div{
+    /* border: 2px solid yellow ; */
+    
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    color: aliceblue;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+}
+
+.container{
+    position: relative;
+    height: 400px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.loginButton{
+    color: black;
+}
+.container .loginBox {
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.container .loginBox .loginInput input {
+    position: relative;
+    width: 100%;
+    padding: 12px 20px;
+    background: transparent ;
+    border: 2px solid white !important;
+    border-radius: 40px;
+    color: aliceblue;
+    box-shadow: none;
+    outline: none ;
+}
+
+.container .loginBox .loginInput input[type="submit"] {
+width: 200px;
+    background: linear-gradient(45deg,yellow,blue);
+border: none !important;
+cursor: pointer !important;
+}
+
+.container i{
+    position: absolute;
+    inset: 0;
+    border: 2px solid white;
+    transition: 0.5s;;
+}
+.container:hover i
+{
+    border: 6px solid var(--clr);
+    filter: drop-shadow(0 0 20px var(--clr));
+}
+.container i:nth-child(1)
+{
+    border-radius: 23% 77% 21% 79% / 24% 75% 25% 76%    ;
+    animation: animate 5s linear infinite;
+}
+
+.container i:nth-child(2)
+{
+    border-radius: 74% 26% 73% 27% / 71% 32% 68% 29%   ;
+    animation: animate3 6s linear infinite;
+}
+
+.container i:nth-child(3)
+{
+    border-radius: 23% 77% 21% 79% / 24% 75% 25% 76%    ;
+    animation: animate2 4s linear infinite;
+}
+@keyframes animate{
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+@keyframes animate2{
+    0%{transform: rotate(360deg);}
+    100%{transform: rotate(0deg);}
+}
+@keyframes animate3{
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+.chkAgreement{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
